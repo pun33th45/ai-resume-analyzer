@@ -10,6 +10,15 @@ from backend.database import save_analysis, get_recent_analyses
 
 app = FastAPI(title="AI Resume Analyzer")
 
+@app.get("/")
+def root():
+    return {
+        "message": "AI Resume Analyzer API is running successfully.",
+        "docs": "/docs",
+        "analyze_endpoint": "/analyze",
+        "history_endpoint": "/history"
+    }
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
