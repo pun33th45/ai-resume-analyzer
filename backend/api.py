@@ -1,11 +1,11 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.resume_parser import extract_text_from_pdf
-from backend.jd_matcher import jd_match_score
-from backend.skill_extractor import extract_skills, count_total_skills
-from backend.scoring import calculate_ats_score, generate_suggestion
-from backend.database import save_analysis, get_recent_analyses
+from resume_parser import extract_text_from_pdf
+from skill_extractor import extract_skills
+from scoring import score_resume
+from jd_matcher import match_resume
+
 
 
 app = FastAPI(title="AI Resume Analyzer")
