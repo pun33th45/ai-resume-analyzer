@@ -4,7 +4,7 @@ from backend.resume_parser import extract_text_from_pdf
 from backend.skill_extractor import extract_skills
 from backend.scoring import calculate_ats_score, generate_suggestion
 from backend.jd_matcher import jd_match_score
-from backend.database import count_total_skills, save_analysis, get_recent_analyses
+from backend.database import save_analysis, get_recent_analyses
 
 
 
@@ -34,7 +34,7 @@ async def analyze_resume(
 
     match = jd_match_score(resume_text, jd_text)
     skills = extract_skills(resume_text)
-    skill_count = count_total_skills(skills)
+    skill_count = sum(len(v) for v in skills.values())
 
     ats_score = calculate_ats_score(match, skill_count)
     suggestion = generate_suggestion(match, skills)
