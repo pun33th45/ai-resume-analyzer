@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="banner.png.png" alt="AI Resume Analyzer Banner" width="40%">
+</p>
+
+
 # AI Resume Analyzer 🤖
 
 An intelligent AI-powered resume analysis system that automatically parses resumes, extracts key skills, evaluates candidate profiles, and matches them with suitable job roles using Machine Learning and Natural Language Processing (NLP).
