@@ -1,10 +1,10 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
-
-from resume_parser import extract_text_from_pdf
-from skill_extractor import extract_skills
-from scoring import calculate_ats_score, generate_suggestion
-from jd_matcher import match_resume
+from backend.resume_parser import extract_text_from_pdf
+from backend.skill_extractor import extract_skills
+from backend.scoring import calculate_ats_score, generate_suggestion
+from backend.jd_matcher import jd_match_score
+from backend.database import count_total_skills, save_analysis, get_recent_analyses
 
 
 
@@ -64,6 +64,3 @@ async def history(limit: int = 10):
     ]
 import os
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
