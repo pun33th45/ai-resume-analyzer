@@ -4,11 +4,14 @@
 
 ## 🌐 Live Deployment
 
-### Frontend (Netlify)
+🌐 Frontend (Netlify):
 https://airesume-analyser.netlify.app/
-### Backend (Render)
-https://ai-resume-analyzer-0ovp.onrender.com
 
+🌐 Backend (Render):
+https://ai-resume-analyzer-0ovp.onrender.com/
+
+📄 API Docs:
+https://ai-resume-analyzer-0ovp.onrender.com/docs
 
 # AI Resume Analyzer 🤖
 
