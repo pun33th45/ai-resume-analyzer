@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>AI Resume Analyzer</h1>
+
+  <form id="analyzeForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="job_title" placeholder="Target Job Title" required>
+
+    <label>Upload Resume (PDF)</label>
+    <input type="file" name="resume" required>
+
+    <label>Upload Job Description (PDF)</label>
+    <input type="file" name="jd" required>
+
+    <button type="submit">Analyze Resume</button>
+  </form>
+
+  <div id="loading">Analyzing...</div>
+
+  <div id="result">
+    <h2>Results</h2>
+    <p><b>ATS Score:</b> <span id="ats"></span></p>
+    <p><b>JD Match:</b> <span id="match"></span>%</p>
+    <p><b>Suggestion:</b> <span id="suggestion"></span></p>
+
+    <h3>Skills Found</h3>
+    <div id="skills"></div>
+  </div>
+
+  <h2>Previous Analyses</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Job</th>
+        <th>ATS</th>
+        <th>JD Match</th>
+      </tr>
+    </thead>
+    <tbody id="history"></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
