@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = "https://ai-resume-analyzer-0ovp.onrender.com";
 
 document.getElementById("analyzeForm").addEventListener("submit", async function (e) {
   e.preventDefault();
