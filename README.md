@@ -2,6 +2,14 @@
   <img src="banner.png.png" alt="AI Resume Analyzer Banner" width="40%">
 </p>
 
+## 🌐 Live Deployment
+
+### Frontend (Netlify)
+https://your-site-name.netlify.app
+
+### Backend (Render)
+https://ai-resume-analyzer-0ovp.onrender.com
+
 
 # AI Resume Analyzer 🤖
 
