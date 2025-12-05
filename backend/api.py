@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from resume_parser import extract_text_from_pdf
 from skill_extractor import extract_skills
-from scoring import score_resume
+from scoring import calculate_ats_score, generate_suggestion
 from jd_matcher import match_resume
 
 
