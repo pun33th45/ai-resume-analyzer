@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" alt="AI Resume Analyzer Banner" width="100%">
+  <img src="banner.png.png" alt="AI Resume Analyzer Banner" width="100%">
 </p>
 
 
