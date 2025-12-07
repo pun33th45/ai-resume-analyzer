@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.container {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #38bdf8;
+}
+
+form input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#loading {
+  display: none;
+  text-align: center;
+  margin: 15px;
+}
+
+#result {
+  margin-top: 20px;
+  background: #020617;
+  padding: 15px;
+  display: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #38bdf8;
+  padding: 8px;
+  text-align: center;
+}
