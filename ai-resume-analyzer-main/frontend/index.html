@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>AI Resume Analyzer</h1>
+    <p class="subtitle">Upload your resume and get instant ATS & skill feedback</p>
+
+    <!-- ================= FORM ================= -->
+    <form id="analyzeForm" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="job_title" placeholder="Target Job Title" required>
+
+      <!-- RESUME UPLOAD -->
+      <label>Upload Resume (PDF)</label>
+      <div class="drop-zone" id="dropZone">
+        <p>Drag & drop your resume here or click to upload</p>
+        <input 
+          type="file"
+          name="resume"
+          id="resumeInput"
+          accept=".pdf"
+          hidden
+          required
+        >
+      </div>
+
+      <!-- JOB DESCRIPTION UPLOAD -->
+      <label>Upload Job Description (PDF)</label>
+      <input type="file" name="jd" accept=".pdf" required>
+
+      <button type="submit">Analyze Resume</button>
+    </form>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- ================= FEATURES ================= -->
+    <div class="features">
+      <div>✅ Skill Extraction</div>
+      <div>✅ ATS Score</div>
+      <div>✅ AI Feedback</div>
+      <div>✅ Quick Analysis</div>
+    </div>
+
+    <!-- ================= RESULTS ================= -->
+    <div id="result" class="hidden">
+      <h2>Results</h2>
+      <p><b>ATS Score:</b> <span id="ats"></span></p>
+      <p><b>JD Match:</b> <span id="match"></span>%</p>
+      <p><b>Suggestion:</b> <span id="suggestion"></span></p>
+
+      <h3>Skills Found</h3>
+      <div id="skills"></div>
+    </div>
+
+    <!-- ================= HISTORY ================= -->
+    <h2>Previous Analyses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Job</th>
+          <th>ATS</th>
+          <th>JD Match</th>
+        </tr>
+      </thead>
+      <tbody id="history"></tbody>
+    </table>
+
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2025 AI Resume Analyzer | Built with Flask & OpenAI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
